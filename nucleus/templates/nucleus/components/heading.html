@@ -1,9 +1,13 @@
 <div class="heading-wrapper">
     <div class="heading">
-        {% if icon %}
-            <div class="heading-icon">
-                <img src="{{ icon }}" alt="{{ title }}">
-            </div><!-- /.heading-icon -->
+        {% if image or initials %}
+            <div class="heading-image{% if initials %} initials{% endif %}{% if rounded %} rounded{% endif %}">                            
+                {% if image %}
+                    <img src="{{ image }}" alt="{{ title }}">
+                {% else %}
+                    <span>{{ initials }}</span>
+                {% endif %}
+            </div><!-- /.heading-image -->
         {% endif %}
 
         <div class="heading-content">

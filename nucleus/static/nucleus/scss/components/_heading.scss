@@ -5,13 +5,33 @@
         display: flex;
         flex-direction: row;
 
-        .heading-icon {
+        .heading-image {
             margin: 0 16px 0 0;
-    
+                
             img {
                 display: block;
                 height: 36px;
-                width: 36px;
+                width: auto;
+            }
+
+            &.initials {
+                align-items: center;
+                background-color: var(--color-primary-base);
+                border-radius: 2px;
+                color: #fff;
+                display: flex;
+                flex-direction: row;
+                font-size: 12px;
+                font-weight: 700;
+                height: 36px;
+                justify-content: center;
+                text-transform: uppercase;
+                width: 36px;                
+            }
+
+            &.rounded {
+                border-radius: 50%;
+                overflow: hidden;
             }
         }        
 

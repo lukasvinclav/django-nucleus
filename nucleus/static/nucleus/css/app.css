@@ -89,7 +89,7 @@ h2 {
   .user-wrapper .avatar {
     margin: 0 12px 0 0; }
   .user-wrapper:after {
-    background-image: url("../icons/chevron-down.svg");
+    background-image: url("../img/chevron-down.svg");
     background-size: 16px 16px;
     content: '';
     display: block;
@@ -2388,14 +2388,32 @@ table#change-history {
   align-items: center;
   display: flex;
   flex-direction: row; }
-  .heading-wrapper .heading .heading-icon,
-  #changelist-form .results table#result_list .heading-wrapper .heading .heading-icon {
+  .heading-wrapper .heading .heading-image,
+  #changelist-form .results table#result_list .heading-wrapper .heading .heading-image {
     margin: 0 16px 0 0; }
-    .heading-wrapper .heading .heading-icon img,
-    #changelist-form .results table#result_list .heading-wrapper .heading .heading-icon img {
+    .heading-wrapper .heading .heading-image img,
+    #changelist-form .results table#result_list .heading-wrapper .heading .heading-image img {
       display: block;
       height: 36px;
+      width: auto; }
+    .heading-wrapper .heading .heading-image.initials,
+    #changelist-form .results table#result_list .heading-wrapper .heading .heading-image.initials {
+      align-items: center;
+      background-color: var(--color-primary-base);
+      border-radius: 2px;
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      font-size: 12px;
+      font-weight: 700;
+      height: 36px;
+      justify-content: center;
+      text-transform: uppercase;
       width: 36px; }
+    .heading-wrapper .heading .heading-image.rounded,
+    #changelist-form .results table#result_list .heading-wrapper .heading .heading-image.rounded {
+      border-radius: 50%;
+      overflow: hidden; }
   .heading-wrapper .heading .heading-content h2,
   #changelist-form .results table#result_list .heading-wrapper .heading .heading-content h2 {
     background: none;

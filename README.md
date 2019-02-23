@@ -105,10 +105,13 @@ INSTALLED_APPS = [
 ### Heading
 
 ```python
-return render_to_string('nucleus/components/heading.html', {
-    'icon': 'img/image.png', # Optional image
+return render_to_string('nucleus/components/heading.html', {    
     'title': 'Title,
     'subtitle': 'Subtitle,
+    'image': 'img/image.png', # Optional image
+    'rounded': True, # Rounded corners, optional
+    'initials': 'LV', # Optional text of the image is not available
+    'background_color': 'red' # Optional background color
 })
 ```
 
