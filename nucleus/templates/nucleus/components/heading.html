@@ -1,7 +1,7 @@
 <div class="heading-wrapper">
     <div class="heading">
         {% if image or initials %}
-            <div class="heading-image{% if initials %} initials{% endif %}{% if rounded %} rounded{% endif %}">                            
+            <div class="heading-image{% if initials %} initials{% endif %}{% if rounded %} rounded{% endif %}"{% if background_color %} style="background-color: {{ background_color }};"{% endif %}>
                 {% if image %}
                     <img src="{{ image }}" alt="{{ title }}">
                 {% else %}
