@@ -1,0 +1,13 @@
+{% load static %}
+
+{% if title %}
+    <h2 class="title">
+        {{ title }}
+    </h2>
+{% endif %}
+
+<div class="chart">
+    <canvas id="chart"
+            style="height: {% if height %}{{ height }}{% else %}365{% endif %}px;"
+            data-series='{{ series }}'></canvas>
+</div><!-- /.chart -->

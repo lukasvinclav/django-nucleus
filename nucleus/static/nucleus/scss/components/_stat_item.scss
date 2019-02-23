@@ -1,0 +1,36 @@
+.stat-item {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 2px var(--color-grey-light);
+  padding: 24px;
+  position: relative;
+}
+
+.stat-item-value {
+  color: var(--color-primary-base);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.stat-item-title {
+  color: var(--color-grey-darkest);
+  font-size: 14px;
+  font-weight: 700;
+  margin: 8px 0 0 0;
+}
+
+.stat-item-subtitle {
+  color: var(--color-grey-dark);
+  font-size: 14px;
+}
+
+.stat-item-label {
+  background-color: var(--color-green-lightest);
+  color: var(--color-green-dark);
+  font-weight: 700;
+  padding: 4px 8px;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}

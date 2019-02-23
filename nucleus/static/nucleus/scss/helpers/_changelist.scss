@@ -1,0 +1,217 @@
+#changelist-filter {
+  background-color: #fff;
+  margin: 0 0 0 40px;
+  padding: 0;
+  position: relative;
+}
+
+#changelist {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
+.changelist-form-wrapper {
+  flex-grow: 1;
+}
+
+#changelist-form {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 2px var(--color-grey-light);
+  flex-grow: 1;
+
+  .actions, .paginator, .results {
+    margin: 0;
+    padding: 0;
+  }
+
+  .actions {
+    align-items: center;
+    border-bottom: 1px solid var(--color-grey-lighter);
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 12px 24px;
+
+    &.selected {
+      background-color: transparent;
+      border-bottom: 1px solid var(--color-grey-lighter);
+      border-top: 0;
+    }
+
+    label {
+      align-items: center;
+      color: var(--color-grey-base);
+      display: flex;
+      flex-direction: row;
+      font-size: 14px;
+      line-height: 44px;
+
+      select {
+        background-color: var(--color-grey-lighter);
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+        box-shadow: none;
+        height: auto;
+        line-height: 1;
+        margin: 0 0 0 8px;
+        padding: 8px;
+      }
+    }
+
+    button.button {
+      background-color: var(--color-grey-lighter);
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      color: var(--color-grey-dark);
+      height: 32px;
+      font-size: 12px;
+      line-height: inherit;
+      padding: 0 8px;
+      margin: 0;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: var(--color-grey-lighter);
+      }
+    }
+
+    span.action-counter, span.question, span.all, span.clear {
+      color: var(--color-grey-base);
+      font-size: 14px;
+      line-height: 44px;
+      margin: 0 0 0 16px;
+      padding: 0;
+
+      a {
+        color: var(--color-primary-base);
+      }
+    }
+
+    span.all,
+    span.action-counter {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  .results {
+    background-color: #fff;
+    border-radius: 3px;
+
+    table#result_list {
+      thead {
+        th {
+          background-color: var(--color-grey-lighter);
+          border-bottom: 1px solid var(--color-grey-lighter);
+          border-left: 0;
+          border-right: 0;
+          border-top: 0;
+          padding: 0;
+          position: relative;
+
+          .text {
+            text-align: left;
+
+            a, span {
+              color: var(--color-grey-dark);
+              font-size: 11px;
+              font-weight: 800;
+              padding: 16px !important;
+
+              &:hover {
+                background-color: transparent;
+              }
+            }
+
+            span {
+              padding: 0;
+            }
+          }
+
+          &.action-checkbox-column {
+            .text, span {
+              padding: 0 !important;
+            }
+          }
+        }
+      }
+
+      .row2 {
+        background-color: #fff;
+      }
+
+      th, td {
+        border-bottom: 1px solid var(--color-grey-lighter);
+        font-family: var(--font-family);
+        font-size: 14px;
+        font-weight: 600;
+        vertical-align: middle;
+        padding: 16px;
+
+        a {
+          color: var(--color-grey-dark);
+        }
+
+        img {
+          height: 18px;
+          width: 18px;
+        }
+
+        &:first-child {
+          padding-left: 24px;
+        }
+
+        &:last-child {
+          padding-right: 24px;
+        }
+
+        input[type=number],
+        input[type=text] {
+          background-color: var(--color-grey-lighter);
+          box-shadow: none;
+          height: 32px;
+        }
+      }
+
+      tr {
+        &.selected {
+          td, th {
+            background-color: var(--color-yellow-lightest);
+            border-color: var(--color-yellow-lightest);
+          }
+        }
+      }
+    }
+  }
+}
+
+#changelist-search {
+  float: left;
+  margin: 0 0 40px 0;
+  position: relative;
+
+  input[type=text] {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 80px 0 44px;
+  }
+
+  img {
+    position: absolute;
+    left: 16px;
+    opacity: .2;
+    top: 17px;
+  }
+
+  input[type=submit] {
+    background-color: transparent;
+    color: var(--color-grey-base);
+    font-weight: 600;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

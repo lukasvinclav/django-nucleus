@@ -1,0 +1,7 @@
+.idea
+.vscode
+node_modules
+*.pyc
+.DS_Store
+.env
+TODO.md

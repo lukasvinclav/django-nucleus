@@ -1,0 +1,36 @@
+.clockbox {
+    border: 0;
+    box-shadow: none;
+    filter: drop-shadow(0 0 3px var(--color-grey-light));
+    width: auto;
+
+    h2 {
+        background-color: #fff;
+        border-bottom: 1px solid var(--color-grey-lighter);
+        color: var(--color-grey-dark);
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 8px 16px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .timelist {
+        li {
+            margin: 0;
+            padding: 0;
+
+            a {
+                color: var(--color-grey-dark);
+                font-size: 14px;
+                font-weight: 600;
+                padding: 8px 16px;
+
+                &:active, &:focus, &:hover {
+                    background-color: var(--color-grey-lightest);
+                }
+            }
+        }
+    }
+} 

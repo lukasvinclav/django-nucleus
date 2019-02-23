@@ -1,0 +1,187 @@
+.sidebar-wrapper {
+  background-color: var(--color-primary-darkest);  
+  min-width: 264px;
+  position: relative;
+  width: 264px;
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }    
+}
+
+.sidebar {  
+  height: 100vh;  
+  left: 0;
+  overflow: scroll;
+  position: fixed;    
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  top: 0;  
+  width: 264px;
+}
+
+.sidebar-inner {
+  width: 264px;
+}
+
+.sidebar-header {
+  border-bottom: 1px solid rgba(#fff, .12);
+  margin: 0 0 40px 0;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 44px;
+    padding: 12px 24px;
+    text-decoration: none;
+  }
+}
+
+.sidebar-content {
+  .nav {
+    margin: 0 0 32px 0;
+
+    a {
+      align-items: center;
+      color: rgba(#fff, .8);
+      display: flex;
+      flex-direction: row;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0;
+      padding: 12px 24px;
+      text-decoration: none;
+      transition: all .2s ease;
+      white-space: nowrap; 
+
+      .icon {
+        height: 20px;
+        margin: 0 16px 0 0;
+
+        img {   
+          opacity: .6;
+          width: 20px;
+        }
+
+        & ~ .title {
+          padding-left: 0 !important;
+        }
+      }
+
+      .title {
+        display: block;
+        flex-grow: 1;
+        height: 20px;
+        line-height: 20px;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;        
+      }
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: block;
+        line-height: inherit;
+        list-style: none;
+        margin: 0;        
+        position: relative;
+      }
+
+      ul {
+        max-height: 0; 
+        overflow: hidden;
+        transition: all .2s ease;
+
+        a {
+          color: rgba(#fff, .5);
+
+          &:hover {
+            color: #fff;                        
+          }
+        }
+
+        li {
+          &.active {
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .app {
+      &.has-submenu {
+        > a {
+          &:after {          
+            background-image: url('../img/chevron-right.svg');
+            background-size: 14px 14px;
+            background-position: center center;
+            background-repeat: no-repeat;          
+            content: '';
+            display: block;
+            height: 14px;
+            opacity: .4;
+            position: absolute;
+            right: 20px;
+            transition: all .2s ease;
+            width: 14px;          
+          }
+        }
+      }
+
+      &.has-icon {
+        ul .title {
+          padding-left: 36px;
+        }
+      }
+
+      > a {        
+        &:hover {          
+          &:after {
+            opacity: 1;
+          }
+        }      
+      }
+
+      &.active {        
+        background-color: rgba(#fff, .04);
+
+        ul {
+          max-height: 200px;
+        }
+
+        > a {
+          background-color: var(--color-primary-base);
+
+          .title {
+             color: #fff;
+          }
+
+          &:after {            
+            opacity: 1;
+            transform: rotate(90deg);            
+          }
+        }
+      } 
+    }
+  }
+}

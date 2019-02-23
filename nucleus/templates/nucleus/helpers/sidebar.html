@@ -1,0 +1,106 @@
+{% load i18n nucleus_tags static %}
+
+<div class="sidebar-wrapper">
+    <div class="sidebar">
+        <div class="sidebar-inner">
+            <div class="sidebar-header">      
+                {% if nucleus.sidebar.title %}
+                    <h1>
+                        <a href="#">
+                            {{ nucleus.sidebar.title}}
+                        </a>
+                    </h1>
+                {% else %}
+                    {{ branding }}
+                {% endif %}
+            </div><!-- /.sidebar-header -->
+
+            <div class="sidebar-content tse-content">
+                {% if available_apps %}
+                    <div class="nav">
+                        <ul>
+                            {% capture as dashboard_url silent %}{% url 'admin:index' %}{% endcapture %}
+
+                            <li class="app {% if dashboard_url == request.path %}active{% endif %}">
+                                <a href="{% url 'admin:index' %}">                            
+                                    {% sidebar_get_icon 'Dashboard' as icon %}
+                                    {% sidebar_get_title 'Dashboard' as title %}
+
+                                    {% if icon %}
+                                        <span class="icon">
+                                            <img src="{% static icon %}">
+                                        </span>
+                                    {% endif %}
+
+                                    <span class="title">
+                                        {% if title %}
+                                            {{ title }}
+                                        {% else %}
+                                            {% trans 'Dashboard' %}
+                                        {% endif %}
+                                    </span>
+                                </a>
+                            </li>
+
+                            {% for app in available_apps %}                    
+                                <li class="app has-submenu {% if icon %}has-icon{% endif %} {% if opts.app_label == app.app_label or cl.opts.app_label == app.app_label %}active{% endif %}" data-app-label="{{ app.app_label }}">
+                                    <a href="{{ app.app_url }}">
+                                        {% sidebar_get_icon app.app_label as icon %}
+                                        {% sidebar_get_title app.app_label as title %}
+
+                                        {% if icon %}
+                                            <span class="icon">
+                                                <img src="{% static icon %}">
+                                            </span>
+                                        {% endif %}
+
+                                        <span class="title">
+                                            {% if title %}
+                                                {{ title }}
+                                            {% else %}
+                                                {{ app.name }}
+                                            {% endif %}
+                                        </span>
+                                    </a>
+
+                                    {% if app.models %}
+                                        <ul>
+                                            {% for model in app.models %}
+                                                <li class="model-{{ model.object_name|lower }}{% if cl.opts.app_label|add:'.'|add:model.object_name|lower == opts.label_lower %} active{% endif %}" data-object-name="{{ model.object_name }}">
+                                                    {% if model.admin_url %}
+                                                        <a href="{{ model.admin_url }}">
+                                                            {% sidebar_get_icon model.object_name as icon %}
+                                                            {% sidebar_get_title model.object_name as title %}
+                                                            
+                                                            {% if icon %}
+                                                                <span class="icon">
+                                                                    <img src="{% static icon %}">
+                                                                </span>
+                                                            {% endif %}
+
+                                                            <span class="title">
+                                                                {% if title %}
+                                                                    {{ title }}
+                                                                {% else %}
+                                                                    {{ model.name }}
+                                                                {% endif %}
+                                                            </span>
+                                                        </a>
+                                                    {% else %}
+                                                        {{ model.name }}
+                                                    {% endif %}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div><!-- /.nav -->
+                {% else %}
+                    <p>{% trans "You don't have permission to view or edit anything." %}</p>
+                {% endif %}
+            </div><!-- /.sidebar-content -->
+        </div><!-- /.sidebar-inner -->
+    </div><!-- /.sidebar -->
+</div><!-- /.sidebar-wrapper -->

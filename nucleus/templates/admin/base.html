@@ -1,0 +1,71 @@
+{% load i18n nucleus_tags static admin_list %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
+    {% block extrastyle %}{% endblock %}
+    {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}">{% endif %}
+    {% block extrahead %}{% endblock %}
+    {% block responsive %}
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive.css" %}">
+        {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive_rtl.css" %}">{% endif %}
+    {% endblock %}
+    {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE">{% endblock %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'nucleus/css/app.css' %}">
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+{% load i18n %}
+
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}" data-admin-utc-offset="{% now "Z" %}">
+    <div class="page-wrapper">
+        {% if not is_popup %}
+            {% capture as branding_block silent %}{% block branding %}{% endblock %}{% endcapture %}
+            {% include 'nucleus/helpers/sidebar.html' with branding=branding_block %}
+        {% endif %}
+
+        <div class="main-wrapper">
+            <div class="main">
+                {% if not is_popup %}
+                    {% capture as pretitle silent %}{% block pretitle %}{% endblock %}{% endcapture %}
+                    {% capture as content_title silent %}{% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}{% endcapture %}
+                    {% capture as nav_global %}{% block nav-global %}{% endblock %}{% endcapture %}
+                    {% capture as object_tools silent %}{% block object-tools %}{% endblock %}{% endcapture %}
+
+                    {% capture as breadcrumbs silent %}
+                        {% block breadcrumbs %}
+                            <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+                            {% if title %} &rsaquo; {{ title }}{% endif %}
+                        {% endblock %}
+                    {% endcapture %}
+
+                    {% include 'nucleus/helpers/header.html' %}
+                {% endif %}
+
+                {% capture as messages silent %}{% block messages %}{% endblock %}{% endcapture %}
+                {% include 'nucleus/helpers/messages.html' %}
+
+                <div class="content-wrapper">
+                    <div class="content">
+                        {% block content %}
+                            {{ content }}
+                        {% endblock %}
+                    </div><!-- /.content -->
+
+                    {% block sidebar %}{% endblock %}
+                </div><!-- /.content-wrapper -->
+            </div><!-- /.main -->
+        </div><!-- /.main-wrapper -->
+    </div><!-- /.page-wrapper -->
+
+    {% block footer %}{% endblock %}
+
+    <script type="text/javascript" src="{% static 'nucleus/js/chart.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+    <script type="text/javascript" src="{% static 'nucleus/js/app.js' %}"></script>
+</body>
+</html>

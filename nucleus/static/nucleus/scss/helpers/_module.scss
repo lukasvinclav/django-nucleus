@@ -1,0 +1,79 @@
+.content > div.module {
+  box-shadow: 0 1px 2px var(--color-grey-light);
+
+  table {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    width: 100%;
+
+    caption {
+      background-color: var(--color-grey-lighter);
+      color: var(--color-grey-dark);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 16px 24px;
+
+      a {
+        color: var(--color-grey-dark) !important;
+        font-size: 11px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+    }
+
+    th, td {
+      border-left: 0;
+      border-right: 0;
+      border-bottom-color: var(--color-grey-lighter);
+      color: var(--color-grey-dark);
+      font-family: var(--font-family);
+      font-size: 14px;
+      vertical-align: middle;
+      padding: 16px;
+
+      &:first-child {
+        padding-left: 24px;
+      }
+
+      &:last-child {
+        padding-right: 24px;
+      }
+
+      a {
+        color: var(--color-grey-dark);
+      }
+    }
+
+    td {
+      padding-left: 8px;
+      padding-right: 8px;      
+
+      a {
+        background-size: 18px 18px;
+        color: var(--color-grey-dark);
+        display: block;
+        height: 18px;
+        font-size: 0;
+        opacity: .5;
+        padding: 0;
+        width: 18px;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      width: 1px;
+    }
+
+    tbody {
+      tr {
+        &:last-child {
+          th, td {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

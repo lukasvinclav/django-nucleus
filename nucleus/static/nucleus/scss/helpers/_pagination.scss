@@ -1,0 +1,38 @@
+#changelist-form .paginator {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  color: var(--color-grey-base);
+  display: flex;
+  font-size: 14px;
+  flex-direction: row;
+  padding: 24px;
+
+  span, a {
+    font-size: 14px;
+    margin: 0 12px;
+    padding: 0;
+  }
+
+  .this-page {
+    margin-left: 0;
+  }
+
+  a {
+    background-color: transparent;
+    color: var(--color-grey-base);
+  }
+
+  span {
+    color: var(--color-primary-base);
+    font-weight: 700;
+  }
+
+  .end {
+    margin: 0 auto 0 0;
+  }
+
+  input {
+    margin: 0 0 0 auto;
+  }
+}

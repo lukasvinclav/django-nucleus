@@ -1,0 +1,27 @@
+<div class="stat-item">
+    {% if value %}
+        <div class="stat-item-value">
+            {{ value }}
+        </div><!-- /.stat-item-value -->
+    {% endif %}
+
+    <div class="stat-item-bottom">
+        {% if title %}
+            <div class="stat-item-title">
+                {{ title }}
+            </div><!-- /.stat-item-title -->
+        {% endif %}
+
+        {% if subtitle %}
+            <div class="stat-item-subtitle">
+                {{ subtitle }}
+            </div><!-- /.stat-item-subtitle -->
+        {% endif %}
+    </div><!-- /.stat-item-bottom -->
+
+    {% if label %}
+        <div class="stat-item-label">
+            {{ label }}
+        </div><!-- /.stat-item-label -->
+    {% endif %}
+</div><!-- /.stat-item -->

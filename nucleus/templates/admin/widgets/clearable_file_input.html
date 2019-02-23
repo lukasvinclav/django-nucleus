@@ -1,0 +1,29 @@
+{% load i18n %}
+
+<div class="input-group">
+    {% if widget.is_initial %}
+        {% if not widget.required %}
+            <div class="input-group-addon">
+                <div class="form-check">
+                    <label for="{{ widget.checkbox_id }}" class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="{{ widget.checkbox_name }}" id="{{ widget.checkbox_id }}" />
+
+                        {{ widget.clear_checkbox_label }}
+                    </label><!-- /.form-check-label -->
+                </div><!-- /.form-check -->
+            </div><!-- /.input-group-addon -->
+        {% endif %}
+    {% endif %}
+
+    <input type="text" value="{% if widget.value %}{{ widget.value.url }}{% endif %}" class="form-control" disabled>
+
+    <div class="input-group-addon">
+        <input id="{{ widget.name }}" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %} />
+
+        <label for="{{ widget.name }}" class="input-group-addon-file-label">            
+            <span>
+                {% trans 'Upload' %}
+            </span>
+        </label>
+    </div><!-- /.input-group-addon -->
+</div><!-- /.input-group -->

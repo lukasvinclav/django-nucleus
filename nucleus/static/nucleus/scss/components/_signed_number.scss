@@ -1,0 +1,7 @@
+.signed-number-wrapper {
+    font-weight: 700; 
+
+    &.positive {
+        color: var(--color-green-dark);
+    }
+} 

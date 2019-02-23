@@ -1,0 +1,18 @@
+div.breadcrumbs {
+  background-color: transparent;
+  bottom: -40px;
+  color: var(--color-grey-base);
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+
+  a {
+    color: var(--color-grey-base);
+
+    &:hover {
+      color: var(--color-grey-base);
+    }
+  }
+}

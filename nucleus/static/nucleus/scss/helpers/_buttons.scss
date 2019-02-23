@@ -1,0 +1,38 @@
+button,
+.delete-confirmation form .cancel-link,
+#changelist .actions .button,
+.button.default,
+input[type='submit'].default,
+.submit-row input.default,
+.submit-row a.deletelink,
+.delete-confirmation form input[type="submit"],
+input[type=submit] {
+  background-color: var(--color-primary-base);
+  border-radius: var(--border-radius);
+  border: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  height: 44px;
+  line-height: 44px;
+  margin: 0;
+  padding: 0 16px;
+  text-transform: none;
+  transition: all .2s ease;
+  vertical-align: top;
+
+  &:active, &:focus, &:hover {
+    background-color: var(--color-primary-dark);
+  }
+}
+
+.delete-confirmation form input[type="submit"],
+.submit-row a.deletelink {
+  background-color: var(--color-red-base);
+
+  &:active, &:focus, &:hover {
+    background-color: var(--color-red-dark);
+  }
+}

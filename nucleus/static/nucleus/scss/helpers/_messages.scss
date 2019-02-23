@@ -1,0 +1,44 @@
+#content-main > form {
+  > p {
+    background-color: var(--color-primary-lightest);
+    border-radius: var(--border-radius);
+    color: var(--color-primary-base);
+    margin: 0 0 24px 0;
+    overflow: hidden;
+    padding: 24px;
+    position: relative;
+
+    &:after {
+      background-color: var(--color-primary-base);
+      bottom: 0;
+      content: '';
+      display: block;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 4px;
+    }
+  }
+}
+
+.errornote {
+  background-color: var(--color-red-lightest);
+  border: 0;
+  border-radius: var(--border-radius);
+  color: var(--color-red-base);
+  margin: 0 0 24px 0;
+  overflow: hidden;
+  padding: 24px;
+  position: relative;
+
+  &:after {
+    background-color: var(--color-red-base);
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 4px;
+  }
+}

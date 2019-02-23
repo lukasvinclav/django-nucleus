@@ -1,0 +1,19 @@
+<div class="heading-wrapper">
+    <div class="heading">
+        {% if icon %}
+            <div class="heading-icon">
+                <img src="{{ icon }}" alt="{{ title }}">
+            </div><!-- /.heading-icon -->
+        {% endif %}
+
+        <div class="heading-content">
+            {% if title %}
+                <h2>{{ title }}</h2>
+            {% endif %}
+
+            {% if subtitle %}
+                <h3>{{ subtitle }}</h3>
+            {% endif %}
+        </div><!-- /.heading-content -->
+    </div><!-- /.heading -->
+</div><!-- /.heading -->

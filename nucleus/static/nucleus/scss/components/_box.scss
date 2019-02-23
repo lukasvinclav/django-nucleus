@@ -1,0 +1,25 @@
+.box {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 2px var(--color-grey-light);
+  padding: 24px;
+
+  table {
+    margin: -24px;
+    width: calc(100% + 48px);
+
+    td {
+      border-color: var(--color-grey-lighter);
+      padding: 16px 24px;
+      vertical-align: middle;
+    }
+
+    tr {
+      &:last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}

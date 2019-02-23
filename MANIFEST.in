@@ -1,0 +1,3 @@
+recursive-include nucleus/templates *
+recursive-include nucleus/templatetags *
+recursive-include nucleus/static *

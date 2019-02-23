@@ -1,0 +1,38 @@
+.heading-wrapper,
+#changelist-form .results table#result_list .heading-wrapper {
+    .heading {    
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+
+        .heading-icon {
+            margin: 0 16px 0 0;
+    
+            img {
+                display: block;
+                height: 36px;
+                width: 36px;
+            }
+        }        
+
+        .heading-content {
+            h2 {
+                background: none;
+                color: var(--color-grey-darker);
+                font-weight: 600;
+                font-size: 14px;
+                margin: 0;
+                padding: 0;
+            }
+    
+            h3 {
+                color: var(--color-grey-dark);
+                font-size: 13px;
+                font-weight: 600;
+                margin: 4px 0 0 0;
+                padding: 0;
+            }
+        }        
+    }
+}
+

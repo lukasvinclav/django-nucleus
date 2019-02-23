@@ -1,0 +1,131 @@
+.inline-group {    
+    fieldset.module {
+        box-shadow: none;
+
+        h2 {
+            background-color: var(--color-grey-lighter);
+            border-bottom: 1px solid var(--color-grey-lighter);            
+            color: var(--color-grey-dark);
+            font-size: 11px;
+            font-weight: 800;
+            margin: 0;
+            padding: 16px 24px;
+        }
+
+        table {
+            thead {
+                th {
+                    background-color: #fff;
+                    border-top: 0;
+                    color: var(--color-grey-dark);                    
+                    font-weight: 800;
+                    text-transform: uppercase;
+                }
+            }
+
+            th, td {
+                background-color: #fff;
+                border-color: var(--color-grey-lighter);
+                padding: 16px !important;
+
+                &:first-child {
+                    padding: 0;
+                }
+
+                &:nth-child(2) {
+                    padding-left: 24px !important;
+                }
+
+                &:last-child {
+                    padding-right: 24px !important;
+                }
+
+                &.original {
+                    padding: 0 !important;
+
+                    p {
+                        color: var(--color-grey-dark);
+                        left: 0;
+                        font-size: 14px;
+                        font-weight: 600;
+                        height: auto;
+                        line-height: 44px;
+                        padding: 16px;
+                        position: relative;
+                        white-space: nowrap;
+                    }
+                }
+
+                select,
+                input[type=text],
+                input[type=email],
+                input[type=number],
+                textarea {
+                    width: 100%;
+                }
+            }
+        }
+
+        tr.add-row {            
+            td {                
+                background-color: #fff;                
+                padding: 16px 24px !important;
+
+                a {
+                    background-image: none;
+                    font-family: var(--font-family);       
+                    font-size: 14px;
+                    margin: 0;
+                    padding: 0;                 
+                }
+            }
+        }
+
+        .add-row {
+            background-color: #fff;
+            border-top: 1px solid var(--color-grey-lighter);
+            font-family: var(--font-family);                        
+            padding: 16px 24px;                        
+
+            a {
+                background-image: none;
+                color: var(--color-primary-base);
+                font-size: 14px;
+                font-weight: 600;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        h3 {
+            background-color: #fff;
+            border: 0;
+            border-bottom: 1px solid var(--color-grey-lighter);
+            border-top: 1px solid var(--color-grey-lighter);
+            color: var(--color-grey-darker);     
+            font-size: 11px;
+            font-weight: 800;                                       
+            padding: 16px 24px;
+            text-transform: uppercase;
+
+            .delete {                
+                display: flex;
+                flex-direction: row;
+                text-transform: none;
+                white-space: nowrap;
+
+                input {
+                    margin: 0 8px 0 0;
+                }
+
+                label {
+                    color: var(--color-grey-dark);
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 1;
+                    margin: 2px 0 0 0;                    
+                }
+            }
+        }
+    }
+}

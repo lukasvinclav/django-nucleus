@@ -1,0 +1,13 @@
+{% if messages %}
+    <div class="messages-wrapper">
+        <div class="messages">
+            <ul>
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                        {{ message|capfirst }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div><!-- /.messages -->
+    </div><!-- /.messages-wrapper -->
+{% endif %}

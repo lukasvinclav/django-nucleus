@@ -1,0 +1,151 @@
+.header-wrapper {
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-grey-lighter);
+  margin: 0 -40px 56px -40px;
+  padding: 12px 40px;
+  position: relative;
+  z-index: 9999;
+
+  h1 {
+    color: var(--color-grey-darkest);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 44px;
+  position: relative;
+}
+
+.header-actions {
+  margin: 0 0 0 auto;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    a {
+      cursor: pointer;
+    }
+    
+    &:hover {
+      .sub-menu {
+        display: block;
+      }
+    }
+  }
+
+  > ul {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+    > li {
+      margin: 0 16px 0 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .sub-menu {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    display: none;
+    filter: drop-shadow(0 0 3px var(--color-grey-light));
+    padding: 3px 0;
+    position: absolute;
+    right: -8px;
+    top: 54px;
+    width: calc(100% + 8px);
+
+    &:after {
+      border: 6px solid transparent;
+      border-bottom-color: #fff;
+      content: '';
+      display: block;
+      height: 0;
+      position: absolute;
+      right: 8px;
+      top: -12px;
+      width: 0;
+    }
+
+    &:before {
+      background-color: transparent;
+      content: '';
+      display: block;
+      height: 14px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: -14px;
+    }
+
+    li {
+      padding: 0 3px;
+
+      a {
+        border-radius: var(--border-radius);
+        color: var(--color-grey-dark);
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 8px 12px;
+        width: 100%;
+
+        &:hover {
+          background-color: var(--color-grey-lighter);
+          color: var(--color-grey-darker);
+        }
+      }
+    }
+  }
+
+  .object-tools-wrapper {
+    border-left: 1px solid var(--color-grey-lighter);
+    margin-left: 16px;
+    padding-left: 32px;
+  }
+
+  .object-tools {
+    float: none;
+    margin: 0;
+
+    li {
+      float: none;
+      height: auto;
+      margin: 0;
+      padding: 0;
+
+      a {
+        background-color: var(--color-primary-base);
+        background-image: none;
+        border-radius: 3px;
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+        height: 40px;
+        line-height: 40px;
+        margin: 0;
+        padding: 0 16px;
+        text-transform: none;
+      }
+    }
+  }
+}

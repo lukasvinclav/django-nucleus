@@ -1,0 +1,64 @@
+{% load i18n nucleus_tags %}
+
+<div class="header-wrapper">
+    <div class="header">
+        <div class="header-title">
+            <div class="header-title-primary">
+                {{ pretitle }}
+                {{ content_title }}
+            </div><!-- /.header-title-primary-->
+
+            {% if breadcrumbs %}
+                <div class="header-title-secondary">
+                    {% include 'nucleus/helpers/breadcrumbs.html' %}
+                </div><!-- /.header-title-secondary -->
+            {% endif %}
+        </div><!-- /.header-title -->
+
+        <div class="header-actions">
+            <ul>
+                <li>
+                    <a>
+                        <span class="user-wrapper">
+                            {% if user.get_avatar %}
+                                <span class="avatar" style="background-image: url('{{ user.get_avatar }}')">{{ user.get_initials }}</span>
+                            {% elif user.get_initials %}                    
+                                <span class="avatar">{{ user.get_initials }}</span>
+                            {% endif %}
+
+                            <span class="user">
+                                <span class="name">
+                                    {% firstof user.get_username %}
+                                </span><!-- /.name -->
+
+                                {% if user.is_superuser %}
+                                    <span class="role">{% trans 'Superuser' %}</span>
+                                {% elif user.is_staff %}
+                                    <span class="role">{% trans 'Staff' %}</span>
+                                {% endif %}
+                            </span><!-- /.user -->
+                        </span><!-- /.user-wrapper --->
+                    </a>
+
+                    <ul class="sub-menu">
+                        {% if user.has_usable_password %}
+                            <li>
+                                <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a>
+                            </li>
+                        {% endif %}
+
+                        <li>
+                            <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+                        </li>
+                    </ul>
+                </li>
+
+                {% if object_tools.strip|length > 0 %}
+                    <li class="object-tools-wrapper">
+                        {{ object_tools }}
+                    </li>
+                {% endif %}
+            </ul>
+        </div><!-- /.header-user -->
+    </div><!-- /.header -->
+</div><!-- /.header-wrapper -->
