@@ -1,3 +1,5 @@
+![Screenshot](https://github.com/lukasvinclav/django-nucleus/raw/master/screenshot.png)
+
 # django-nucleus
 
 ![](https://img.shields.io/badge/Version-0.1.0-orange.svg?style=flat-square)
