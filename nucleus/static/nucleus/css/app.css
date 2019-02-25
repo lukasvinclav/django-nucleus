@@ -609,6 +609,7 @@ input, textarea, select, .form-row p, form .button {
   background-color: #fff;
   border: 1px solid var(--color-grey-light);
   border-radius: 3px;
+  box-shadow: 0 1px 2px var(--color-grey-lighter);
   cursor: pointer;
   display: block;
   height: 17px;
@@ -1279,6 +1280,13 @@ table#change-history {
   table#change-history tbody tr:last-child th, table#change-history tbody tr:last-child td {
     border-bottom: 0; }
 
+.messages ul {
+  margin: 0;
+  padding: 0; }
+  .messages ul li {
+    list-style: none; }
+
+.messages ul li,
 #content-main > form > p {
   background-color: var(--color-primary-lightest);
   border-radius: var(--border-radius);
@@ -1287,6 +1295,7 @@ table#change-history {
   overflow: hidden;
   padding: 24px;
   position: relative; }
+  .messages ul li:after,
   #content-main > form > p:after {
     background-color: var(--color-primary-base);
     bottom: 0;
@@ -1296,6 +1305,20 @@ table#change-history {
     position: absolute;
     top: 0;
     width: 4px; }
+  .messages ul li a,
+  #content-main > form > p a {
+    color: var(--color-primary-base);
+    font-weight: 700; }
+  .messages ul li.success,
+  #content-main > form > p.success {
+    background-color: var(--color-green-lightest);
+    color: var(--color-green-base); }
+    .messages ul li.success:after,
+    #content-main > form > p.success:after {
+      background-color: var(--color-green-base); }
+    .messages ul li.success a,
+    #content-main > form > p.success a {
+      color: var(--color-green-base); }
 
 .errornote {
   background-color: var(--color-red-lightest);

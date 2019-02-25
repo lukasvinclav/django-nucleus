@@ -1,22 +1,48 @@
-#content-main > form {
-  > p {
-    background-color: var(--color-primary-lightest);
-    border-radius: var(--border-radius);
-    color: var(--color-primary-base);
-    margin: 0 0 24px 0;
-    overflow: hidden;
-    padding: 24px;
-    position: relative;
+.messages ul {
+  margin: 0;
+  padding: 0;
 
+  li {
+    list-style: none;
+  }
+}
+
+.messages ul li,
+#content-main > form > p {
+  background-color: var(--color-primary-lightest);
+  border-radius: var(--border-radius);
+  color: var(--color-primary-base);
+  margin: 0 0 24px 0;
+  overflow: hidden;
+  padding: 24px;
+  position: relative;
+
+  &:after {
+    background-color: var(--color-primary-base);
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 4px;
+  }
+
+  a {
+    color: var(--color-primary-base);
+    font-weight: 700;
+  }
+
+  &.success {
+    background-color: var(--color-green-lightest);
+    color: var(--color-green-base);
+    
     &:after {
-      background-color: var(--color-primary-base);
-      bottom: 0;
-      content: '';
-      display: block;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 4px;
+      background-color: var(--color-green-base);
+    }
+
+    a {
+      color: var(--color-green-base);
     }
   }
 }

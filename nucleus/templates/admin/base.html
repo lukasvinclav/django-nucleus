@@ -47,8 +47,21 @@
                     {% include 'nucleus/helpers/header.html' %}
                 {% endif %}
 
-                {% capture as messages silent %}{% block messages %}{% endblock %}{% endcapture %}
-                {% include 'nucleus/helpers/messages.html' %}
+                {% capture as messages silent %}
+                    {% block messages %}
+                        {% if messages %}
+                            <ul>
+                                {% for message in messages %}
+                                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                                        {{ message|capfirst }}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endblock %}
+                {% endcapture %}
+
+                {% include 'nucleus/helpers/messages.html' with messages=messages %}
 
                 <div class="content-wrapper">
                     <div class="content">
