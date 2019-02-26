@@ -162,18 +162,28 @@
         }      
       }
 
-      &.active {        
-        background-color: rgba(#fff, .04);
-
+      &.active {         
         ul {
           max-height: 200px;
         }
 
         > a {
-          background-color: var(--color-primary-base);
-
+          background-color: rgba(#fff, .04);
+          position: relative;
+          
           .title {
              color: #fff;
+          }
+
+          &:before {
+            background-color: var(--color-primary-base);
+            bottom: 0;
+            content: '';
+            display: block;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 3px;
           }
 
           &:after {            

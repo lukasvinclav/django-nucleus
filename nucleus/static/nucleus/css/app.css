@@ -294,17 +294,25 @@ h2 {
     padding-left: 36px; }
   .sidebar-content .nav .app > a:hover:after {
     opacity: 1; }
-  .sidebar-content .nav .app.active {
-    background-color: rgba(255, 255, 255, 0.04); }
-    .sidebar-content .nav .app.active ul {
-      max-height: 200px; }
-    .sidebar-content .nav .app.active > a {
-      background-color: var(--color-primary-base); }
-      .sidebar-content .nav .app.active > a .title {
-        color: #fff; }
-      .sidebar-content .nav .app.active > a:after {
-        opacity: 1;
-        transform: rotate(90deg); }
+  .sidebar-content .nav .app.active ul {
+    max-height: 200px; }
+  .sidebar-content .nav .app.active > a {
+    background-color: rgba(255, 255, 255, 0.04);
+    position: relative; }
+    .sidebar-content .nav .app.active > a .title {
+      color: #fff; }
+    .sidebar-content .nav .app.active > a:before {
+      background-color: var(--color-primary-base);
+      bottom: 0;
+      content: '';
+      display: block;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 3px; }
+    .sidebar-content .nav .app.active > a:after {
+      opacity: 1;
+      transform: rotate(90deg); }
 
 .header-wrapper {
   background-color: #fff;
