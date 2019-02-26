@@ -55,6 +55,11 @@ body {
   font-weight: 600;
 }
 
+a, a:link, a:visited {
+  color: var(--color-primary-base);
+  text-decoration: none;
+}
+
 li, dt, dd {
   font-size: 14px;
   line-height: inherit;
