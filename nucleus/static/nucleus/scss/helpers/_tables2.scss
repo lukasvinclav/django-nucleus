@@ -3,7 +3,7 @@
     border-radius: var(--border-radius);
     box-shadow: 0 1px 2px var(--color-grey-light);    
     overflow: hidden;
-    
+
     table {
         border: 0;
         width: 100%;
@@ -14,7 +14,7 @@
             font-size: 14px;
             font-weight: 600;
             vertical-align: middle;
-            padding: 16px;
+            padding: 16px 24px;
         }        
 
         thead {
@@ -43,3 +43,52 @@
         }
     }
 } 
+
+.pagination {
+    border-top: 1px solid var(--color-grey-lighter);
+    color: var(--color-grey-base);
+    display: flex;
+    font-size: 14px;
+    flex-direction: row;    
+    list-style: none;
+    margin: 0;    
+    padding: 24px;
+
+    li {
+        list-style: none;
+        padding: 0 12px;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        a {
+            background-color: transparent;
+            color: var(--color-grey-base);
+
+            &:hover {
+                color: var(--color-primary-base);
+            }
+        }        
+
+        &.active {
+            a {
+                color: var(--color-primary-base);
+                font-weight: 700;
+            } 
+        }       
+    }
+}
+
+.box {
+    .table-container {
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0 0 -24px 0;
+        overflow: visible;
+    }
+
+    .pagination {
+        margin: 0 -24px;
+    }
+}

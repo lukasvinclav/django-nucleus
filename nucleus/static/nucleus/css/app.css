@@ -2432,7 +2432,7 @@ table#change-history {
       font-size: 14px;
       font-weight: 600;
       vertical-align: middle;
-      padding: 16px; }
+      padding: 16px 24px; }
     .table-container table thead th {
       background-color: var(--color-grey-lighter);
       border: 0;
@@ -2444,6 +2444,38 @@ table#change-history {
         color: var(--color-grey-dark); }
     .table-container table tbody tr:last-child td {
       border-bottom: 0; }
+
+.pagination {
+  border-top: 1px solid var(--color-grey-lighter);
+  color: var(--color-grey-base);
+  display: flex;
+  font-size: 14px;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 24px; }
+  .pagination li {
+    list-style: none;
+    padding: 0 12px; }
+    .pagination li:first-child {
+      padding-left: 0; }
+    .pagination li a {
+      background-color: transparent;
+      color: var(--color-grey-base); }
+      .pagination li a:hover {
+        color: var(--color-primary-base); }
+    .pagination li.active a {
+      color: var(--color-primary-base);
+      font-weight: 700; }
+
+.box .table-container {
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 -24px 0;
+  overflow: visible; }
+
+.box .pagination {
+  margin: 0 -24px; }
 
 .heading-wrapper .heading,
 #changelist-form .results table#result_list .heading-wrapper .heading {
@@ -2523,8 +2555,8 @@ table#change-history {
 
 .stat-item-title {
   color: var(--color-grey-darkest);
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   margin: 8px 0 0 0; }
 
 .stat-item-subtitle {
@@ -2553,11 +2585,23 @@ table#change-history {
   box-shadow: 0 1px 2px var(--color-grey-light);
   padding: 24px; }
   .box table {
-    margin: -24px;
+    margin: 0 -24px;
     width: calc(100% + 48px); }
+    .box table td, .box table th {
+      padding: 16px 24px; }
     .box table td {
       border-color: var(--color-grey-lighter);
-      padding: 16px 24px;
       vertical-align: middle; }
     .box table tr:last-child td {
       border-bottom: 0; }
+
+.box-title {
+  margin: 0;
+  padding: 0 0 24px 0; }
+  .box-title h3 {
+    color: var(--color-grey-black);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0; }
+  .box-title p {
+    margin: 0; }
