@@ -2594,6 +2594,10 @@ table#change-history {
       vertical-align: middle; }
     .box table tr:last-child td {
       border-bottom: 0; }
+  .box .chart {
+    box-shadow: none;
+    margin: 0;
+    padding: 0; }
 
 .box-title {
   margin: 0;

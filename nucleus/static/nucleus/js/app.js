@@ -70,16 +70,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     xAxes: [{
                         maxBarThickness: 1,
                         gridLines: {
-                            color: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-base'),
-                            display: false,
-                            drawBorder: false
+                            borderDash: [8, 8],
+                            color: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-lighter'),
+                            drawBorder: false,
+                            zeroLineColor: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-lighter'),
+                            zeroLineWidth: 1
                         },
                         ticks: {
                             fontColor: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-dark'),
                             fontSize: 11,
                             fontFamily: getComputedStyle(document.documentElement).getPropertyValue('--font-family'),
                             fontWeight: 700,
-                            // step: 1000,
                             padding: 10
                         }
                     }],
