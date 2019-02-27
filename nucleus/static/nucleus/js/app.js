@@ -12,12 +12,62 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
     });
 
-    // Charts
-    var chart = document.getElementById('chart');
-
-    if (chart != null) {
+    // Stat item charts
+    var charts = document.querySelectorAll('.stat-item-chart');
+    charts.forEach(function(chart) {
         var ctx = chart.getContext('2d');
+        data = JSON.parse(chart.getAttribute('data-series'));
 
+        var datasets = data.datasets.map(function(dataset) {
+            return {
+                backgroundColor: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-lightest'),
+                borderColor: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-lighter'),
+                borderWidth: 1,
+                data: dataset.data,       
+                lineTension: 0,   
+                pointRadius: 0
+            }
+        });
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: data.labels,
+                datasets: datasets
+            },
+            options: {
+                plugins: {
+                    datalabels: {
+                        display: false
+                    }
+                },
+                maintainAspectRatio: true,
+                legend: {
+                    display: false
+                },
+                layout: {
+                    padding: {
+                        left: 0,
+                        top: 30
+                    }
+                },           
+                scales: {
+                    xAxes: [{
+                        display: false                        
+                    }],
+                    yAxes: [{
+                        display: false
+                    }]
+                }
+            }
+        });        
+    });
+
+    // Charts
+    var charts = document.querySelectorAll('.chart-canvas');
+
+    charts.forEach(function(chart) {
+        var ctx = chart.getContext('2d');
         data = JSON.parse(chart.getAttribute('data-series'));
 
         var datasets = data.datasets.map(function(dataset) {
@@ -103,6 +153,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 }
             }
         });
-    }
-
+    });
 });

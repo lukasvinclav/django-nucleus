@@ -1,4 +1,8 @@
 <div class="stat-item">
+    {% if series %}
+        <canvas class="stat-item-chart" data-series='{{ series }}'></canvas>
+    {% endif %}
+    
     {% if value %}
         <div class="stat-item-value">
             {{ value }}

@@ -2,35 +2,52 @@
   background-color: #fff;
   border-radius: var(--border-radius);
   box-shadow: 0 1px 2px var(--color-grey-light);
-  padding: 24px;
+  padding: 40px 24px;
   position: relative;
 }
 
 .stat-item-value {
   color: var(--color-primary-base);
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 600;
+  position: relative;
+  text-align: center;
+  z-index: 2;
 }
 
 .stat-item-title {
   color: var(--color-grey-darkest);
   font-size: 16px;
   font-weight: 600;
-  margin: 8px 0 0 0;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  z-index: 2;
 }
 
 .stat-item-subtitle {
   color: var(--color-grey-dark);
   font-size: 14px;
+  position: relative;
+  z-index: 2;  
 }
 
 .stat-item-label {
-  background-color: var(--color-green-lightest);
-  color: var(--color-green-dark);
-  font-weight: 700;
-  padding: 4px 8px;
+  color: var(--color-grey-base);
+  font-weight: 700;  
   position: absolute;
-  right: 24px;
-  top: 50%;
+  right: 16px;
+  top: 20px;
   transform: translateY(-50%);
+}
+
+.stat-item-chart {
+  bottom: 0;
+  height: 100% !important;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100% !important;  
 }
