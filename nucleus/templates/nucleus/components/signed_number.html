@@ -1,5 +1,5 @@
 <div class="signed-number-wrapper {% if value > 0 %}positive{% elif value < 0 %}negative{% else %}neutral{% endif %}">
     <div class="signed-number">
-        {% if value > 0 %}+{% endif %}{{ display }}
+        {% if value > 0 %}+{% endif %}{% if display %}{{ display }}{% else %}{{ value }}{% endif %}
     </div><!-- /.signed-number -->
 </div><!-- /.signed-number-wrapper -->

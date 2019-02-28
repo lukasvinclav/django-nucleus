@@ -2477,6 +2477,9 @@ table#change-history {
 .box .pagination {
   margin: 0 -24px; }
 
+.box .box-title + .table-container {
+  margin-top: -25px; }
+
 .heading-wrapper .heading,
 #changelist-form .results table#result_list .heading-wrapper .heading {
   align-items: center;
@@ -2616,12 +2619,14 @@ table#change-history {
     padding: 0; }
 
 .box-title {
-  margin: 0;
-  padding: 0 0 24px 0; }
+  border-bottom: 1px solid var(--color-grey-lighter);
+  margin: 0 -24px 24px -24px;
+  padding: 0 24px 24px 24px; }
   .box-title h3 {
     color: var(--color-grey-black);
     font-size: 16px;
     font-weight: 600;
     margin: 0; }
   .box-title p {
-    margin: 0; }
+    color: var(--color-grey-base);
+    margin: 4px 0 0 0; }

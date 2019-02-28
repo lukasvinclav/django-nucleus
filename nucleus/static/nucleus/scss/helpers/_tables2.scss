@@ -91,4 +91,10 @@
     .pagination {
         margin: 0 -24px;
     }
+
+    .box-title {
+        & + .table-container {
+            margin-top: -25px;
+        }
+    }
 }

@@ -1,5 +1,5 @@
 .box {
-  background-color: #fff;
+  background-color: #fff;  
   border-radius: var(--border-radius);
   box-shadow: 0 1px 2px var(--color-grey-light);
   padding: 24px;
@@ -34,8 +34,9 @@
 }
 
 .box-title {
-  margin: 0;
-  padding: 0 0 24px 0;
+  border-bottom: 1px solid var(--color-grey-lighter);
+  margin: 0 -24px 24px -24px;
+  padding: 0 24px 24px 24px;
 
   h3 {
     color: var(--color-grey-black);
@@ -45,6 +46,7 @@
   }
 
   p {
-    margin: 0;
+    color: var(--color-grey-base);
+    margin: 4px 0 0 0;
   }
 }

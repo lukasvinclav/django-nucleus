@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 borderColor: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-lighter'),
                 borderWidth: 1,
                 data: dataset.data,       
-                lineTension: 0,   
                 pointRadius: 0
             }
         });
@@ -72,20 +71,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         var datasets = data.datasets.map(function(dataset) {
             return {
-                backgroundColor: getComputedStyle(document.documentElement).getPropertyValue('--color-green-base'),
-                borderColor: getComputedStyle(document.documentElement).getPropertyValue('--color-green-light'),
+                backgroundColor: 'rgba(34, 41, 47, .02)',
+                borderColor: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-light'),
                 barThickness: 0,
                 borderWidth: 2,
                 data: dataset.data,
-                fill: false,
+                fill: true,
                 label: false,
-                lineTension: 0,
-                pointBackgroundColor: getComputedStyle(document.documentElement).getPropertyValue('--color-green-base'),
+                pointBackgroundColor: getComputedStyle(document.documentElement).getPropertyValue('--color-primary-base'),
                 pointBorderColor: '#fff',
-                pointBorderWidth: 2,
-                pointHoverBackgroundColor: getComputedStyle(document.documentElement).getPropertyValue('--color-green-base'),
+                pointBorderWidth: 4,
+                pointHoverBackgroundColor: getComputedStyle(document.documentElement).getPropertyValue('--color-primary-dark'),
                 pointHoverBorderColor: '#fff',
-                pointRadius: 4
+                pointHoverBorderWidth: 4,
+                pointHoverRadius: 5,
+                pointRadius: 5
             }
         });
 
@@ -111,43 +111,39 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         top: 30
                     }
                 },
-                tooltips: {
-                    callbacks: {
-                        title: false
-                    }
-                },
                 scales: {
                     xAxes: [{
                         maxBarThickness: 1,
                         gridLines: {
-                            borderDash: [8, 8],
-                            color: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-lighter'),
+                            borderDash: [10, 10],
+                            color: 'rgba(34, 41, 47, .08)',
                             drawBorder: false,
                             zeroLineColor: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-lighter'),
                             zeroLineWidth: 1
                         },
                         ticks: {
-                            fontColor: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-dark'),
-                            fontSize: 11,
+                            fontColor: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-base'),
+                            fontSize: 12,
                             fontFamily: getComputedStyle(document.documentElement).getPropertyValue('--font-family'),
-                            fontWeight: 700,
+                            fontStyle: '700',
                             padding: 10
                         }
                     }],
                     yAxes: [{
                         gridLines: {
-                            borderDash: [8, 8],
-                            color: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-lighter'),
+                            borderDash: [10, 10],
+                            color: 'rgba(34, 41, 47, .08)',
                             drawBorder: false,
                             zeroLineColor: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-lighter'),
                             zeroLineWidth: 1
                         },
                         ticks: {
-                            fontColor: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-dark'),
-                            fontSize: 11,
+                            fontColor: getComputedStyle(document.documentElement).getPropertyValue('--color-grey-base'),
+                            fontSize: 12,
                             fontFamily: getComputedStyle(document.documentElement).getPropertyValue('--font-family'),
-                            fontWeight: 700,
-                            padding: 20
+                            fontStyle: '700',
+                            padding: 20,
+                            maxTicksLimit: 8,
                         }
                     }]
                 }
