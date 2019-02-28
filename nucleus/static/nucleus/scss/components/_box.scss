@@ -34,7 +34,10 @@
 }
 
 .box-title {
+  align-items: center;
   border-bottom: 1px solid var(--color-grey-lighter);
+  display: flex;
+  flex-direction: row;
   margin: 0 -24px 24px -24px;
   padding: 0 24px 24px 24px;
 
@@ -47,6 +50,10 @@
 
   p {
     color: var(--color-grey-base);
-    margin: 4px 0 0 0;
+    margin: 0;
   }
+}
+
+.box-title-icon {
+  margin: 0 16px 0 0;
 }
