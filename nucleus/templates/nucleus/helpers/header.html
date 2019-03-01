@@ -21,12 +21,13 @@
                     <a>
                         <span class="user-wrapper">
                             {% if user.get_avatar %}
-                                <span class="avatar" style="background-image: url('{{ user.get_avatar }}')">{{ user.get_initials }}</span>
+                                <span class="avatar" style="background-image: url('{{ user.get_avatar }}')">                                    
+                                </span>
                             {% elif user.get_initials %}                    
                                 <span class="avatar">{{ user.get_initials }}</span>
                             {% endif %}
 
-                            <span class="user">
+                            <span class="user">                                
                                 <span class="name">
                                     {% firstof user.get_username %}
                                 </span><!-- /.name -->
