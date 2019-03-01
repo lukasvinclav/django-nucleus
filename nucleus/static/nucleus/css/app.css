@@ -36,7 +36,14 @@
   --color-primary-base: #3490DC;
   --color-primary-dark: #2779BD;
   --color-primary-darker: #1C3D5A;
-  --color-primary-darkest: #12283A; }
+  --color-primary-darkest: #12283A;
+  --color-blue-lightest: #EFF8FF;
+  --color-blue-lighter: #BCDEFA;
+  --color-blue-light: #6CB2EB;
+  --color-blue-base: #3490DC;
+  --color-blue-dark: #2779BD;
+  --color-blue-darker: #1C3D5A;
+  --color-blue-darkest: #12283A; }
 
 body {
   -moz-osx-font-smoothing: grayscale;
@@ -514,8 +521,8 @@ div.breadcrumbs {
     background-color: #fff;
     border-radius: 3px; }
     #changelist-form .results table#result_list thead th {
-      background-color: var(--color-grey-lighter);
-      border-bottom: 1px solid var(--color-grey-lighter);
+      background-color: #fff;
+      border-bottom: 2px solid var(--color-grey-lighter);
       border-left: 0;
       border-right: 0;
       border-top: 0;
@@ -2433,7 +2440,9 @@ table#change-history {
       padding: 16px 24px; }
     .table-container table thead th {
       background-color: var(--color-grey-lighter);
+      background-color: #fff;
       border: 0;
+      border-bottom: 1px solid var(--color-grey-lighter);
       color: var(--color-grey-dark);
       font-size: 11px;
       font-weight: 800;
@@ -2476,7 +2485,7 @@ table#change-history {
   margin: 0 -24px; }
 
 .box .box-title + .table-container {
-  margin-top: -25px; }
+  margin-top: -24px; }
 
 .heading-wrapper .heading,
 #changelist-form .results table#result_list .heading-wrapper .heading {
@@ -2532,8 +2541,8 @@ table#change-history {
 
 .progress-wrapper .progress {
   background-color: var(--color-green-lightest);
-  border-radius: 3px;
-  height: 6px;
+  border-radius: 2px;
+  height: 4px;
   min-width: 120px;
   overflow: hidden;
   width: 100%; }
@@ -2558,7 +2567,7 @@ table#change-history {
   z-index: 2; }
 
 .stat-item-title {
-  color: var(--color-grey-darkest);
+  color: var(--color-grey-dark);
   font-size: 16px;
   font-weight: 600;
   margin: 0;
@@ -2634,3 +2643,28 @@ table#change-history {
 
 .box-title-icon {
   margin: 0 16px 0 0; }
+
+.label-wrapper {
+  align-items: center;
+  background-color: var(--color-grey-lighter);
+  border-radius: 12px;
+  color: var(--color-grey-dark);
+  display: inline-block;
+  flex-direction: row;
+  height: 24px;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 24px;
+  justify-content: center;
+  padding: 0 12px;
+  text-align: center;
+  text-transform: uppercase; }
+  .label-wrapper.success {
+    background-color: var(--color-green-lightest);
+    color: var(--color-green-dark); }
+  .label-wrapper.info {
+    background-color: var(--color-blue-lightest);
+    color: var(--color-blue-dark); }
+  .label-wrapper.error {
+    background-color: var(--color-red-lightest);
+    color: var(--color-red-dark); }

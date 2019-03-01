@@ -1,0 +1,31 @@
+.label-wrapper {
+    align-items: center;
+    background-color: var(--color-grey-lighter);
+    border-radius: 12px;
+    color: var(--color-grey-dark);
+    display: inline-block;
+    flex-direction: row;
+    height: 24px; 
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 24px;
+    justify-content: center;
+    padding: 0 12px;
+    text-align: center; 
+    text-transform: uppercase;
+
+    &.success {
+        background-color: var(--color-green-lightest);
+        color: var(--color-green-dark);
+    }
+
+    &.info {
+        background-color: var(--color-blue-lightest);
+        color: var(--color-blue-dark);
+    }    
+
+    &.error {
+        background-color: var(--color-red-lightest);
+        color: var(--color-red-dark);
+    }        
+} 

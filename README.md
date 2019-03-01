@@ -154,6 +154,15 @@ return render_to_string('nucleus/components/progress.html', {
 })
 ```
 
+### Label
+
+```python
+return render_to_string('nucleus/components/progress.html', {
+    'title': _('Active'),
+    'class': 'success',  # Optional. Accepted values: success, info, error 
+})
+```
+
 ## Credits
 
 - [Feather](https://feathericons.com/)
