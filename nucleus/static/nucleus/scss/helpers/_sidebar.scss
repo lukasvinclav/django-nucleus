@@ -11,6 +11,8 @@
 }
 
 .sidebar {  
+  display: flex;
+  flex-direction: column;
   height: 100vh;  
   left: 0;
   overflow: scroll;
@@ -18,10 +20,6 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   top: 0;  
-  width: 264px;
-}
-
-.sidebar-inner {
   width: 264px;
 }
 
@@ -193,5 +191,23 @@
         }
       } 
     }
+  }
+}
+
+.sidebar-footer {
+  border-top: 1px solid rgba(#fff, .12);
+  margin: auto 0 0 0;    
+  padding: 24px;
+
+  h3 {
+    color: #fff;    
+    font-weight: 600;
+    margin: 0;
+  }
+
+  p {
+    color: rgba(#fff, .7);
+    line-height: 22px;
+    margin: 16px 0 0 0;
   }
 }

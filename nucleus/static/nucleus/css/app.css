@@ -204,6 +204,8 @@ h2 {
     height: 0; }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   left: 0;
   overflow: scroll;
@@ -211,9 +213,6 @@ h2 {
   scrollbar-width: none;
   -ms-overflow-style: none;
   top: 0;
-  width: 264px; }
-
-.sidebar-inner {
   width: 264px; }
 
 .sidebar-header {
@@ -320,6 +319,19 @@ h2 {
     .sidebar-content .nav .app.active > a:after {
       opacity: 1;
       transform: rotate(90deg); }
+
+.sidebar-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin: auto 0 0 0;
+  padding: 24px; }
+  .sidebar-footer h3 {
+    color: #fff;
+    font-weight: 600;
+    margin: 0; }
+  .sidebar-footer p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 22px;
+    margin: 16px 0 0 0; }
 
 .header-wrapper {
   background-color: #fff;
