@@ -163,6 +163,13 @@ return render_to_string('nucleus/components/progress.html', {
 })
 ```
 
+## User avatar
+
+To display user avatar in top right corner before the currently signed user you can implement two methods in user model:
+
+- **get_initials**
+- **get_avatar**
+
 ## Credits
 
 - [Feather](https://feathericons.com/)
