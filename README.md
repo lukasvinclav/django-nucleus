@@ -36,6 +36,12 @@ NUCLEUS = {
         # Title
         'title': 'Custom title',
 
+        # Footer
+        'footer': {
+            'title': _('Custom title'),
+            'description': _('Longer text displayed below the title'),
+        },
+
         # Navigation
         'navigation': {
             # Application
