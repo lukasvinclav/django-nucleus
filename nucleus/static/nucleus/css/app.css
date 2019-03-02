@@ -592,10 +592,11 @@ div.breadcrumbs {
     line-height: 50px;
     padding: 0 80px 0 44px; }
   #changelist-search img {
-    position: absolute;
+    height: 20px;
     left: 16px;
-    opacity: .2;
-    top: 17px; }
+    position: absolute;
+    top: 16px;
+    width: 20px; }
   #changelist-search input[type=submit] {
     background-color: transparent;
     color: var(--color-grey-base);

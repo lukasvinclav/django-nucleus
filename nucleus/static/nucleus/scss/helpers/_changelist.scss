@@ -198,10 +198,11 @@
   }
 
   img {
-    position: absolute;
+    height: 20px;    
     left: 16px;
-    opacity: .2;
-    top: 17px;
+    position: absolute;
+    top: 16px;
+    width: 20px;
   }
 
   input[type=submit] {
