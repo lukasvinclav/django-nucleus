@@ -34,7 +34,7 @@ _ = lambda s: s  # Translations in setting file
 NUCLEUS = {
     'sidebar': {
         # Title
-        'title': 'Custom title',
+        'title': _('Custom title'),
 
         # Footer
         'footer': {
@@ -46,14 +46,14 @@ NUCLEUS = {
         'navigation': {
             # Application
             'auth': {
-                'title': _('Accounts'), # Override title
-                'icon': 'img/custom-icon.svg' # Optional
+                'title': _('Accounts'),  # Override title
+                'icon': 'img/custom-icon.svg'  # Optional
             },
 
             # Model
             'auth.User': {
                 'title': _('Users'),
-                'icon': 'img/custom-icon.svg'
+                'icon': 'img/custom-icon.svg'  # Optional
             }        
         }    
     }
