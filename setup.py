@@ -11,7 +11,7 @@ setup(
     short_description='Theme for Django admin',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    version='0.1.3',
+    version='0.1.0',
     url='http://github.com/lukasvinclav/django-nucleus',
     packages=[
         'nucleus',
@@ -27,5 +27,5 @@ setup(
         'Intended Audience :: Developers',
         'Framework :: Django',
     ],
-    keywords="django admin numeric filter"
+    keywords="django admin theme clean minimal ui sidebar"
 )
