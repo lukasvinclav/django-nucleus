@@ -52,7 +52,8 @@ body {
   color: var(--color-grey-dark);
   font-family: var(--font-family);
   font-size: 14px;
-  font-weight: 600; }
+  font-weight: 600;
+  overflow-x: hidden; }
 
 a, a:link, a:visited {
   color: var(--color-primary-base);
@@ -424,13 +425,17 @@ h2 {
     margin-left: 16px;
     padding-left: 32px; }
   .header-actions .object-tools {
+    display: flex;
+    flex-direction: row;
     float: none;
     margin: 0; }
     .header-actions .object-tools li {
       float: none;
       height: auto;
-      margin: 0;
+      margin: 0 0 0 16px;
       padding: 0; }
+      .header-actions .object-tools li:first-child {
+        margin-left: 0; }
       .header-actions .object-tools li a {
         background-color: var(--color-primary-base);
         background-image: none;
@@ -469,7 +474,10 @@ div.breadcrumbs {
   display: flex;
   flex-direction: row-reverse;
   margin: 0 0 40px 0;
+  max-width: calc(100vw - 264px - 2 * 40px);
   padding: 0; }
+  #changelist.filtered {
+    max-width: calc(100vw - 264px - 2 * 40px); }
 
 .changelist-form-wrapper {
   flex-grow: 1; }
@@ -504,10 +512,10 @@ div.breadcrumbs {
         background-color: var(--color-grey-lighter);
         border-radius: var(--border-radius) 0 0 var(--border-radius);
         box-shadow: none;
-        height: auto;
+        height: 32px;
         line-height: 1;
         margin: 0 0 0 8px;
-        padding: 8px; }
+        padding: 9px 8px; }
     #changelist-form .actions button.button {
       background-color: var(--color-grey-lighter);
       border-radius: 0 var(--border-radius) var(--border-radius) 0;
@@ -533,10 +541,15 @@ div.breadcrumbs {
       margin: 0 0 0 auto; }
   #changelist-form .results {
     background-color: #fff;
-    border-radius: 3px; }
+    border-radius: 3px;
+    overflow-x: auto;
+    width: 100%;
+    max-width: calc(100vw - 264px - 2 * 40px); }
+    .filtered #changelist-form .results {
+      max-width: calc(100vw - 264px - 3 * 40px - 240px); }
     #changelist-form .results table#result_list thead th {
       background-color: #fff;
-      border-bottom: 2px solid var(--color-grey-lighter);
+      border-bottom: 1px solid var(--color-grey-lighter);
       border-left: 0;
       border-right: 0;
       border-top: 0;
@@ -580,8 +593,7 @@ div.breadcrumbs {
         box-shadow: none;
         height: 32px; }
     #changelist-form .results table#result_list tr.selected td, #changelist-form .results table#result_list tr.selected th {
-      background-color: var(--color-yellow-lightest);
-      border-color: var(--color-yellow-lightest); }
+      background-color: var(--color-yellow-lightest); }
 
 #changelist-search {
   float: left;
