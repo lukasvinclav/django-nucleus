@@ -1,4 +1,5 @@
-![Screenshot](https://github.com/lukasvinclav/django-nucleus/raw/master/screenshot.png)
+![Screenshot](https://github.com/lukasvinclav/django-nucleus/raw/master/screenshot-1.jpg)
+![Screenshot](https://github.com/lukasvinclav/django-nucleus/raw/master/screenshot-2.jpg)
 
 # django-nucleus
 
