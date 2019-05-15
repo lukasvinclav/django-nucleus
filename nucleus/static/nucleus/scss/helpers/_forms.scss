@@ -113,9 +113,14 @@ input[type=search] {
 }
 
 textarea {
-  height: 180px;
-  line-height: 20px;
-  padding: 8px 16px;
+  height: auto;
+  min-height: 180px;
+  line-height: 22px;
+  padding: 12px 16px;
+
+  &.fullwidth {
+    flex-grow: 1;
+  }
 }
 
 select {
@@ -198,7 +203,7 @@ fieldset.module {
 
       label {
         font-weight: 600;
-        line-height: 20px;        
+        line-height: 17px;
       }
 
       .help {

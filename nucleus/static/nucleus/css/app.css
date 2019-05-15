@@ -730,9 +730,12 @@ input[type=search] {
     outline: none; }
 
 textarea {
-  height: 180px;
-  line-height: 20px;
-  padding: 8px 16px; }
+  height: auto;
+  min-height: 180px;
+  line-height: 22px;
+  padding: 12px 16px; }
+  textarea.fullwidth {
+    flex-grow: 1; }
 
 select {
   background-image: url("../img/chevron-down.svg");
@@ -792,7 +795,7 @@ fieldset.module {
       margin: 0 8px 0 0; }
     fieldset.module .form-row .checkbox-row label {
       font-weight: 600;
-      line-height: 20px; }
+      line-height: 17px; }
     fieldset.module .form-row .checkbox-row .help {
       margin: 8px 0 0 0; }
     fieldset.module .form-row p {
