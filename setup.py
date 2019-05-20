@@ -11,7 +11,7 @@ setup(
     short_description='Theme for Django admin',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    version='0.1.1',
+    version='0.1.2',
     url='http://github.com/lukasvinclav/django-nucleus',
     packages=[
         'nucleus',
