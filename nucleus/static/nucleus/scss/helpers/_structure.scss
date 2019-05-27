@@ -37,7 +37,7 @@
     display: flex;
     padding: 0;
 
-    .main {
+    .main { 
       align-items: center;
       display: flex;
       height: 100%;
@@ -46,7 +46,7 @@
       width: 100%;
 
       .content-wrapper {
-        width: 380px;
+        width: 100%;
 
         h2 {
           color: var(--color-grey-darkest);

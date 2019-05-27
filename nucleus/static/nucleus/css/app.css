@@ -215,7 +215,7 @@ h2 {
     padding: 0;
     width: 100%; }
     .page-wrapper.form-layout .main-wrapper .main .content-wrapper {
-      width: 380px; }
+      width: 100%; }
       .page-wrapper.form-layout .main-wrapper .main .content-wrapper h2 {
         color: var(--color-grey-darkest);
         font-size: 18px;
@@ -503,7 +503,7 @@ h2 {
   border: 1px solid var(--color-grey-lighter);
   border-radius: var(--border-radius);
   cursor: pointer;
-  display: flex;
+  display: none;
   flex-direction: column;
   height: 40px;
   margin: 0 0 0 8px;
@@ -516,6 +516,9 @@ h2 {
     height: 2px;
     margin: 2px 0;
     width: 20px; }
+  @media (max-width: 1200px) {
+    .header-toggle-sidebar {
+      display: flex; } }
 
 div.breadcrumbs {
   background-color: transparent;
@@ -596,7 +599,7 @@ div.breadcrumbs {
         background-color: var(--color-grey-lighter);
         border-radius: var(--border-radius) 0 0 var(--border-radius);
         box-shadow: none;
-        height: 32px;
+        height: 32px !important;
         line-height: 1;
         margin: 0 0 0 8px;
         padding: 9px 8px;

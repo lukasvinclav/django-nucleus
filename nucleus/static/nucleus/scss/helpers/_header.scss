@@ -177,7 +177,7 @@
   border: 1px solid var(--color-grey-lighter);
   border-radius: var(--border-radius); 
   cursor: pointer;
-  display: flex;
+  display: none;
   flex-direction: column;
   height: 40px;
   margin: 0 0 0 8px;
@@ -191,5 +191,9 @@
     height: 2px;
     margin: 2px 0;
     width: 20px;
+  }
+
+  @media (max-width: 1200px) {
+    display: flex;
   }
 }
