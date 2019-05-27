@@ -67,7 +67,7 @@
           </div>
         {% endif %}
       {% endblock %}
-
+  
         <div class="changelist-form-wrapper">
           <form id="changelist-form" method="post"{% if cl.formset.is_multipart %} enctype="multipart/form-data"{% endif %} novalidate>{% csrf_token %}
           {% if cl.formset %}

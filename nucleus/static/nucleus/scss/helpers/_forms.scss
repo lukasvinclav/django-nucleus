@@ -102,9 +102,9 @@ input[type=search] {
   font-family: var(--font-family);
   font-size: 14px;
   font-weight: 700;
-  height: 44px;
+  height: 44px !important;
   line-height: 44px;
-  padding: 0 16px;
+  padding: 0 16px !important;
 
   &:active, &:focus {
     border: 0;
@@ -194,6 +194,16 @@ fieldset.module {
       flex-direction: row;
       flex-wrap: wrap;
       min-height: 44px;
+
+      @media (max-width: 768px) {
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+
+        label {
+          margin: 0 0 12px 0;
+        }        
+      }
     }
 
     .checkbox-row {
@@ -322,6 +332,11 @@ fieldset.module {
       box-shadow: none;
       margin: 0 16px 0 0;
       min-width: 428px;
+
+      @media (max-width: 768px) {
+        min-width: inherit;
+        width: 100%;
+      }
     }
 
     select[multiple] {
@@ -356,6 +371,10 @@ fieldset.module {
 
     &:last-child {
       margin-left: 0 !important;
+    }
+
+    @media (max-width: 768px) {
+      margin: 0 0 8px 0 !important;
     }
   }
 }

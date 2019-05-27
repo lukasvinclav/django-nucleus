@@ -1,9 +1,9 @@
 .avatar {
-  background-color: var(--color-primary-lightest);  
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
+  border: 1px solid var(--color-grey-lighter);
   color: var(--color-primary-dark);
   display: inline-block;
   font-size: 12px;
@@ -18,11 +18,22 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  padding: 0 32px 0 0;
+  padding: 0 24px 0 0;
   position: relative;
 
   .avatar {
-    margin: 0 12px 0 0;
+    align-items: center;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    margin: 0;
+    width: 36px;
+
+    img {
+      display: block;
+      margin: -3px 0 0 0;
+      width: 18px;
+    }
   }
 
   &:after {
@@ -42,6 +53,7 @@
 .user {
   display: flex;
   flex-direction: column;
+  margin: 0 0 0 12px;
 
   .name {
     color: var(--color-grey-darkest);
@@ -51,6 +63,10 @@
   .role {
     color: var(--color-grey-base);
     font-size: 13px;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 }
 

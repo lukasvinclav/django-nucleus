@@ -1,6 +1,16 @@
 #changelist-filter {
   background-color: transparent;
 
+  @media (max-width: 1200px) {
+    display: none;
+
+    .filter-open & {
+      display: block;
+      min-width: 224px;
+      width: 224px;
+    }    
+  }
+  
   h2, h3 {
     background-color: transparent;
     color: var(--color-grey-darker);

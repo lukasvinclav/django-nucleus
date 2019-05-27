@@ -12,6 +12,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
     });
 
+    // Sidebar
+    if (document.querySelector('.header-toggle-sidebar') !== null) {
+        document.querySelector('.header-toggle-sidebar').addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            document.querySelector('body').classList.toggle('sidebar-open');
+        });
+    }
+
+    // Filter
+    if (document.querySelector('.actions-toggle-filter') !== null) {
+        document.querySelector('.actions-toggle-filter').addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            document.querySelector('body').classList.toggle('filter-open');
+        });
+    }
+
     // Stat item charts
     var charts = document.querySelectorAll('.stat-item-chart');
     charts.forEach(function(chart) {

@@ -1,4 +1,4 @@
-{% load i18n nucleus_tags %}
+{% load i18n nucleus_tags static %}
 
 <div class="header-wrapper">
     <div class="header">
@@ -25,6 +25,8 @@
                                 </span>
                             {% elif user.get_initials %}                    
                                 <span class="avatar">{{ user.get_initials }}</span>
+                            {% else %}
+                                <span class="avatar"><img src="{% static 'nucleus/img/user.svg' %}"></span>
                             {% endif %}
 
                             <span class="user">                                
@@ -61,5 +63,11 @@
                 {% endif %}
             </ul>
         </div><!-- /.header-user -->
+
+        <div class="header-toggle-sidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div><!-- /.header-toggle-sidebar -->
     </div><!-- /.header -->
 </div><!-- /.header-wrapper -->

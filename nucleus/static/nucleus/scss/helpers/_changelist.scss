@@ -3,23 +3,39 @@
   margin: 0 0 0 40px;
   padding: 0;
   position: relative;
+  order: initial;
 }
 
 #changelist {
   background-color: transparent;
   display: flex;
   flex-direction: row-reverse;
-  margin: 0 0 40px 0;
-  max-width: calc(100vw - 264px - 2 * 40px);
+  margin: 0;
+  max-width: calc(100vw - 264px - 2 * var(--content-padding));
   padding: 0;
 
+  @media (max-width: 1200px) {
+    max-width: calc(100vw - 2 * var(--content-padding));
+  }
+
   &.filtered {
-    max-width: calc(100vw - 264px - 2 * 40px);
+    max-width: calc(100vw - 264px - 2 * var(--content-padding));
+
+    @media (max-width: 1200px) {
+      max-width: calc(100vw - 2 * var(--content-padding));
+    }
   }
 }
 
 .changelist-form-wrapper {
-  flex-grow: 1;
+  flex-grow: 1;  
+
+  @media (max-width: 1200px) {
+    .filter-open & {
+      margin-left: -224px;
+    }
+  }
+
 }
 
 #changelist-form {
@@ -34,18 +50,26 @@
   }
 
   .actions {
-    align-items: center;
     border-bottom: 1px solid var(--color-grey-lighter);
     display: flex;
     flex-direction: row;
-    margin: 0;
-    padding: 12px 24px;
+    flex-wrap: nowrap;
 
     &.selected {
       background-color: transparent;
       border-bottom: 1px solid var(--color-grey-lighter);
       border-top: 0;
-    }
+    }    
+  }
+
+  .actions-inner {
+    align-items: center;    
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 12px 24px;
 
     label {
       align-items: center;
@@ -63,6 +87,15 @@
         line-height: 1;
         margin: 0 0 0 8px;
         padding: 9px 8px;
+        width: initial;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 0;
+
+        select {
+          margin: 0;
+        }
       }
     }
 
@@ -82,9 +115,13 @@
       }
     }
 
-    span.action-counter, span.question, span.all, span.clear {
+    span.action-counter, 
+    span.all, 
+    span.clear,
+    span.question {
       color: var(--color-grey-base);
       font-size: 14px;
+      flex-grow: 0 !important;
       line-height: 44px;
       margin: 0 0 0 16px;
       padding: 0;
@@ -98,6 +135,14 @@
     span.action-counter {
       margin: 0 0 0 auto;
     }
+
+    @media (max-width: 768px) {    
+      span {        
+        border-top: 1px solid var(--color-grey-lighter);
+        margin: 12px -24px -12px -24px !important;
+        padding: 0 24px !important;
+      }
+    }    
   }
 
   .results {
@@ -105,10 +150,18 @@
     border-radius: 3px;
     overflow-x: auto;
     width: 100%;
-    max-width: calc(100vw - 264px - 2 * 40px);
-    
+    max-width: calc(100vw - 264px - 2 * var(--content-padding));
+
+    @media (max-width: 1200px) {
+      max-width: calc(100vw - 2 * var(--content-padding));
+    }
+
     .filtered & {
-      max-width: calc(100vw - 264px - 3 * 40px - 240px);
+      max-width: calc(100vw - 264px - 3 * var(--content-padding) - 240px);
+
+      @media (max-width: 1200px) {
+        max-width: calc(100vw - 2 * var(--content-padding));
+      }
     }
 
     table#result_list {
@@ -190,7 +243,6 @@
         &.selected {
           td, th {
             background-color: var(--color-yellow-lightest);
-            // border-color: var(--color-yellow-lightest);
           }
         }
       }
@@ -200,13 +252,26 @@
 
 #changelist-search {
   float: left;
-  margin: 0 0 40px 0;
+  margin: 0 0 var(--content-padding) 0;
   position: relative;
 
+  > div {
+    display: flex;
+    flex-direction: row;
+    max-width: inherit;
+  }
+
+  @media (max-width: 1200px) {
+    float: none;  
+  }
+
   input[type=text] {
+    flex-grow: 1;
     height: 50px;
     line-height: 50px;
+    margin: 0;
     padding: 0 80px 0 44px;
+    width: 100%;
   }
 
   img {
@@ -226,5 +291,21 @@
     position: absolute;
     right: 0;
     top: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .actions-toggle-filter {
+    background-image: url('../../admin/img/search.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px; 
+    border-left: 1px solid var(--color-grey-lighter);       
+    content: '';
+    cursor: pointer;
+    display: block;        
+    margin: 0;
+    padding: 0 24px;
+    width: 24px;
   }
 }

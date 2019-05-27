@@ -7,17 +7,17 @@
 .main-wrapper {
   background-color: var(--color-grey-lightest);
   flex-grow: 1;
-  padding: 0 40px;
+  padding: 0 var(--content-padding);
 
   .popup & {
-    padding: 40px;
+    padding: var(--content-padding);
   }
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  padding: 0 0 40px 0;
+  padding: 0 0 var(--content-padding) 0;
 
   .popup & {
     padding: 0;
@@ -25,6 +25,8 @@
 }
 
 #content-main {
+  float: none;
+  
   .object-tools {
     display: none;
   }
