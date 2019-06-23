@@ -203,6 +203,10 @@ h2 {
   float: none; }
   #content-main .object-tools {
     display: none; }
+  .login #content-main {
+    margin: 0 auto;
+    max-width: 320px;
+    padding: 80px 0; }
 
 .page-wrapper.form-layout .main-wrapper {
   display: flex;
