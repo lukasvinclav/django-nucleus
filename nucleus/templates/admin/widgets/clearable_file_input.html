@@ -15,7 +15,11 @@
         {% endif %}
     {% endif %}
 
-    <input type="text" value="{% if widget.value %}{{ widget.value.url }}{% endif %}" class="form-control" disabled>
+    {% if widget.value %}
+        <a target="_blank" href="{{ widget.value.url }}" style="flex-grow: 1; text-align: center; margin: auto">{{ widget.value }}</a>
+    {% else %}
+        <input type="text" value="{% if widget.value %}{{ widget.value.url }}{% endif %}" class="form-control" disabled>
+    {% endif %}
 
     <div class="input-group-addon">
         <input id="{{ widget.name }}" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %} />
