@@ -31,7 +31,7 @@
 {% endfor %}
 {% endif %}
 
-<div id="content-main">  
+<div id="content-main">
 {% if user.is_authenticated %}
 <p class="errornote">
 {% blocktrans trimmed %}
@@ -40,7 +40,6 @@
 {% endblocktrans %}
 </p>
 {% endif %}
-<h2>{% trans 'Sign in to administration' %}</h2>
 
 <form action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
   <div class="form-row">
@@ -58,7 +57,7 @@
     <a href="{{ password_reset_url }}">{% trans 'Forgotten your password or username?' %}</a>
   </div>
   {% endif %}
-  
+
   <div class="submit-row">
     <input type="submit" value="{% trans 'Log in' %}">
   </div>
