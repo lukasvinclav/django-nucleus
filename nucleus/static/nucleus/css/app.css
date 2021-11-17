@@ -577,7 +577,6 @@ div.breadcrumbs {
     padding: 0; }
   #changelist-form .actions {
     border-bottom: 1px solid var(--color-grey-lighter);
-    background: var(--color-grey-lighter);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap; }
