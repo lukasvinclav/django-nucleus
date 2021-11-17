@@ -1,5 +1,5 @@
 {
-  "name": "sass-tutorial",
+  "name": "django-nucleus",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^4.13.1"
+    "node-sass": "^6.0.1"
   }
 }
